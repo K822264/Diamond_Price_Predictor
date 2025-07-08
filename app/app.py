@@ -15,6 +15,31 @@ clarity_order = ["I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "IF"]
 
 # App UI
 st.title("💎 Diamond Price Predictor")
+st.markdown(
+    """
+    <style>
+    .rotate {
+        animation: rotation 10s infinite linear;
+        width: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    </style>
+    <center>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Brilliant-cut_diamond_top_view.svg/512px-Brilliant-cut_diamond_top_view.svg.png" class="rotate"/>
+    </center>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown("Predict the price of a diamond based on its characteristics using a trained ML model.")
 
 st.sidebar.header("Enter Diamond Features")
